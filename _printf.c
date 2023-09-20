@@ -25,7 +25,7 @@ int printf(const char *format, ...)
 			i++;
 		if (format[i] == 'c' || format[i] == 'd' || format[i] == 's' || format[i] == 'i')
 		{
-			output += select(format[i])(args);
+			output += choose(format[i])(args);
 		}
 		else if (format[i] == '%')
 		{
@@ -38,9 +38,7 @@ int printf(const char *format, ...)
 
 		}
 		else
-		{
 			output += _putchar(format[i]);
-		}
 	}
 	va_end(args);
 	return (output);
