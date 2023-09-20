@@ -4,27 +4,26 @@
  * @format: character string
  * Return: character
  */
-
-
-int printf(conts char *format, ...)
+int printf(const char *format, ...)
 {
 	int i;
 	va_list args;
 	va_start(args, format);
 
-	int output = 0;
+	int output;
+
+	output = 0;
 
 	if (format == NULL)
 	{
 		return (-1);
 	}
-	for (1 = 0; format[i] != '\0'; i++)
+	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
 
 			i++;
 		if (format[i] == 'c' || format[i] == 'd' || format[i] == 's' || format[i] == 'i')
-
 		{
 			output += select(format[i])(args);
 		}

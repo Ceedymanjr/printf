@@ -31,7 +31,7 @@ int s_case(va_list args)
 	}
 	while (*ptr)
 	{
-		out + = _putchar(*ptr);
+		out += _putchar(*ptr);
 		ptr++;
 	}
 	return (out);
@@ -44,9 +44,10 @@ int s_case(va_list args)
 int i_case(va_list args)
 {
 	int out = 0;
-	int x = v_arg(args, int);
 
-	out = print_num;
+	int x = va_arg(args, int);
+
+	out = print_dg(x, 0);
 	return (out);
 }
 
@@ -55,6 +56,6 @@ int d_case(va_list args)
 	int out = 0;
 	int x = va_arg(args, int);
 
-	out = print_num;
+	out = print_dg(x, 0);
 	return (out);
 }
