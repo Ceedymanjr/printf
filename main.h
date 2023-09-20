@@ -13,6 +13,6 @@ int s_case(va_list args);
 int i_case(va_list args);
 int d_case(va_list args);
 int (*choose(char str))(va_list args);
-int printf(const char *format, ...);
+int _printf(const char *format, ...);
 
 #endif

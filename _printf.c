@@ -8,11 +8,11 @@ int printf(const char *format, ...)
 {
 	int i;
 	va_list args;
-	va_start(args, format);
-
 	int output;
 
 	output = 0;
+
+	va_start(args, format);
 
 	if (format == NULL)
 	{
@@ -34,13 +34,12 @@ int printf(const char *format, ...)
 		else if
 		{
 			output += _putchar '%';
-			output += _putchar(format[i]);
 			continue;
 
 		}
 		else
 		{
-			output += _putchar(ormat[i]);
+			output += _putchar(format[i]);
 		}
 	}
 	va_end(args);
