@@ -22,25 +22,28 @@ int printf(conts char *format, ...)
 	{
 		if (format[i] == '%')
 
-	i++;
-	if (format[i] == 'c' || format[i] == 'd' || format[i] == 's' || format[i] == 'i')
+			i++;
+		if (format[i] == 'c' || format[i] == 'd' || format[i] == 's' || format[i] == 'i')
 
-	{
-		output += select(format[i])(args);
-	}
-	else
-	{
-		output += _putchar '%';
-		output += _putchar(format[i]);
-		continue;
+		{
+			output += select(format[i])(args);
+		}
+		else if (format[i] == '%')
+		{
+			output += _putchar('%');
+		}
+		else if
+		{
+			output += _putchar '%';
+			output += _putchar(format[i]);
+			continue;
 
-	}
-	else
-	{
-		output += _putchar(ormat[i]);
+		}
+		else
+		{
+			output += _putchar(ormat[i]);
+		}
 	}
 	va_end(args);
 	return (output);
-
-
 }

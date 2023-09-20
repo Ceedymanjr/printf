@@ -2,7 +2,7 @@
 /**
  * c_case - funnction that chck for c
  * @args: arguments
- * Return: character
+ * Return: printed character
  */
 int c_case(va_list args)
 {
@@ -15,9 +15,9 @@ int c_case(va_list args)
 }
 
 /**
- * s_case - function that checks for s
+ * s_case - function that checks for the s
  * @args: arguments
- * Return: character
+ * Return: printed string
  */
 int s_case(va_list args)
 {
@@ -36,10 +36,25 @@ int s_case(va_list args)
 	}
 	return (out);
 }
-
+/**
+ * i_case - function that checks for i
+ * @args: arguments
+ * Return: printed number
+ */
 int i_case(va_list args)
 {
 	int out = 0;
 	int x = v_arg(args, int);
-	out = print_num 
+
+	out = print_num;
+	return (out);
+}
+
+int d_case(va_list args)
+{
+	int out = 0;
+	int x = va_arg(args, int);
+
+	out = print_num;
+	return (out);
 }

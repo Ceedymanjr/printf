@@ -1,4 +1,9 @@
-
+#include "main.h"
+/**
+ * *choose - function that choose the arguments
+ * @str: character
+ * Return: what ever pass
+ */
 int (*choose(char str))(va_list args)
 {
 	if (str == 'c')
@@ -17,6 +22,5 @@ int (*choose(char str))(va_list args)
 	{
 		return (&i_case);
 	}
-	else if 
-
+	return (0);
 }
