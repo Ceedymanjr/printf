@@ -1,6 +1,14 @@
-#include <stdio.h>
-int _putchar(int c)
+#include <unistd.h>
+
+int _putchar(char c)
 {
-	write(1, &c, 1);
-	return(-1);
+    return write(1, &c, 1);
 }
+
+int main()
+{
+    char c = 'H';
+    _putchar(c);
+    return 0;
+}
+
