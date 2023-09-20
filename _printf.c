@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * print - function that produces output according to a format
+ * _printf - function that produces output according to a format
  * @format: character string
  * Return: character
  */
-int printf(const char *format, ...)
+int _printf(const char *format, ...)
 {
 	int i;
 	va_list args;
@@ -23,7 +23,8 @@ int printf(const char *format, ...)
 		if (format[i] == '%')
 
 			i++;
-		if (format[i] == 'c' || format[i] == 'd' || format[i] == 's' || format[i] == 'i')
+		if (format[i] == 'c' || format[i] == 'd' ||
+format[i] == 's' || format[i] == 'i')
 		{
 			output += choose(format[i])(args);
 		}
@@ -33,12 +34,13 @@ int printf(const char *format, ...)
 		}
 		else if
 		{
-			output += _putchar '%';
+			output += _putchar('%');
 			continue;
-
 		}
 		else
+		{
 			output += _putchar(format[i]);
+		}
 	}
 	va_end(args);
 	return (output);

@@ -50,7 +50,11 @@ int i_case(va_list args)
 	out = print_dg(x, 0);
 	return (out);
 }
-
+/**
+ * d_case - function that checks for d
+ * @args: arguments
+ * Return: printed number
+ */
 int d_case(va_list args)
 {
 	int out = 0;
