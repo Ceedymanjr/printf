@@ -29,6 +29,10 @@ int _printf(const char *format, ...)
 			{
 				output += choose(format[i])(args);
 			}
+			else if (format[i] == '%')
+			{
+				output += _putchar('%');
+			}
 			else
 			{
 				output += _putchar('%');
