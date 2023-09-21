@@ -27,7 +27,7 @@ int s_case(va_list args)
 
 	if (ptr == NULL)
 	{
-		ptr = "(nil)";
+		ptr = "(null)";
 	}
 	while (*ptr)
 	{
