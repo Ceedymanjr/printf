@@ -12,7 +12,7 @@ int (*choose(char str))(va_list args)
 	}
 	else if (str == 'd')
 	{
-		return (&s_case);
+		return (&d_case);
 	}
 	else if (str == 's')
 	{

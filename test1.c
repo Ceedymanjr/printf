@@ -18,5 +18,5 @@ int print_dg(long num, int out)
 		out = print_dg(num / 10, out);
 	}
 	_putchar(num % 10 + '0');
-	return (out - 1);
+	return (out + 1);
 }
